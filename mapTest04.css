@@ -1,0 +1,467 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: helvetica;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color: black; 
+}
+
+
+.container{
+}
+
+.selected{
+	opacity: 1 !important;
+}
+
+.map-container{
+	position: relative;
+	height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+#mapid { 
+    background-color: #f2f2f2;
+	height: 100%;
+    z-index: 0;
+}
+
+.leaflet-bottom{
+	display: none;
+}
+
+.hide{
+	display: none !important;
+}
+
+/*------------text------------*/
+
+.red-circle1-text{
+    width: 100%;
+    background-color: red;
+    z-index: 10;
+    position: absolute;
+    bottom: -100px;
+    height: 100px;
+    transition: all 0.5s ease;
+}
+
+.red-circle1-text p{
+    width: 200px;
+    padding-top: 31px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.green-circle1-text{
+    width: 100%;
+    background-color: green;
+    z-index: 10;
+    position: absolute;
+    bottom: -100px;
+    height: 100px;
+    transition: all 0.5s ease;
+}
+
+.green-circle1-text p{
+    width: 200px;
+    padding-top: 31px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.orange-circle1-text{
+    width: 100%;
+    background-color: orange;
+    z-index: 10;
+    position: absolute;
+    bottom: -100px;
+    height: 100px;
+    transition: all 0.5s ease;
+}
+
+.orange-circle1-text p{
+    width: 200px;
+    padding-top: 31px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.text-group{
+	/*opacity: 0.5;*/
+	margin-top: 20px;
+}
+
+.text{
+    opacity:0.6;
+}
+
+.text:hover{
+	opacity:1;
+}
+
+.red-text{
+
+}
+
+.green-text{
+
+}
+
+/*------------squares------------*/
+
+.square{
+	display: inline-block;
+	opacity: 0.5;
+}
+
+
+.square p{
+	padding: 10px;
+}
+/*------------bars------------*/
+.red-bar{
+	text-align: center;
+	color: red;
+	margin-left: 20%;
+}
+
+.green-bar{
+	text-align: center;
+	color: #32ff01;
+	margin-left: 20%;
+}
+
+.orange-bar{
+	text-align: center;
+	color: orange;
+	margin-left: 20%;
+}
+
+.bars{
+	width: 100%;
+}
+
+/*------------custom-slider------------*/
+
+.ui-widget-header{
+    background-color: #53538e!important;
+    background: none;
+}
+
+.ui-slider-handle{
+    background: none!important;
+    background-color: darkblue !important;
+}
+
+.slider-container{
+	width:45%;
+	height: auto;
+	padding-top: 30px;
+    left:50%;
+   top:90%;
+   -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+   position:absolute;
+   z-index: 1;
+}
+
+/* #flat-slider .ui-slider-pip:nth-of-type(3n+1) .ui-slider-label {
+    display: none; 
+} */
+
+.ui-slider-pip.ui-slider-pip-label{
+    margin-top: 7px;
+}
+
+.ui-slider-pip.ui-slider-pip-label:hover{
+    color: black;
+    font-weight: bold;
+}
+
+#steps-fivepercent-slider .ui-slider-tip {
+    visibility: visible;
+    opacity: 1;
+    top: -30px;
+}
+
+/*------------------------------old slider preset----------------------------*/
+
+.numbers{
+    display: block;
+}
+
+.numbers p{
+    display: inline-block;
+    font: normal 10px Arial, Helvetica, sans-serif;
+    width: 8.7%;
+    text-align: center;
+}
+
+/*------------map ting------------*/
+.mapBox{
+    height: 500px;
+    width: 100%;
+    outline: 1px solid black;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.mapBox-img{
+    height: 80%;
+    width: auto;
+}
+
+.mapBox img{
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+.marker-text{
+    font-family: helvetica;
+    font-family: 30px;
+    padding: 20px;
+    float: right;
+}
+
+
+/*------------project list------------*/
+
+.projects-list-container{
+    position: absolute;
+    background-color: rgba(255,255,255,0.8);
+    z-index: 1;
+    display: block;
+    height: 800px;
+    bottom: -800px;
+    -webkit-box-shadow: 0px 0px 36px 1px rgba(0,0,0,0.10);
+    -moz-box-shadow: 0px 0px 36px 1px rgba(0,0,0,0.10);
+    box-shadow: 0px 0px 36px 1px rgba(0,0,0,0.10);
+    /* overflow: auto; */
+    /*display: none;*/
+
+}
+
+.projects-list{
+    color: black;
+    font-family: Roboto;
+    font-weight: normal;
+    height: 700px;
+    margin: 50px;
+    overflow: auto;
+    padding-right: 10px;
+}
+
+.project-list-btn{
+    bottom: 0;
+    position: absolute;
+    background-color: white;
+    z-index: 15;
+}
+
+.project-list-btn-img{
+    padding-right: 0px !important;
+}
+
+.project-list-btn-text{
+    padding-left: 10px !important;
+}
+
+.project-list-btn div{
+    padding: 20px;
+    display: inline-block;
+}
+
+
+.project-list-btn-img{
+    padding: 20px;
+    right: 0;
+}
+
+.project-list-btn-img i{
+    color: black;
+    width: 100%;
+    height: auto;
+}
+
+i.fas.fa-times{
+    padding: 10px;
+    color: black;
+    float: right;
+}
+
+.text{
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+
+
+/*------------project popups------------*/
+
+.project-popups{
+    width: 80%;
+    height: 250px;
+     position: absolute;
+    bottom: -250px;
+    z-index: 2;
+    right: 0;
+    background-color: white;
+}
+
+.popups{
+    width: 80%;
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 40px;
+    width: 100%;
+    padding: 50px;
+
+}
+
+
+.animated-icon{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  /* box-shadow: 0px 0px 4px white; */
+  -webkit-box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.10);
+    -moz-box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.10);
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.10);
+  transition: all 0.5s;
+  transform-origin: 50% 50%;
+}
+
+li { 
+    cursor: pointer; 
+}
+
+.fade{
+    background-color: blue;
+    width: 100%;
+    height:20px;
+}
+
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+
+.project-names{
+    padding: 30px;
+    background-color: white;
+    bottom: -200px;
+    right: 0;
+    position: absolute;
+    z-index: 20;
+width: 300px;
+}
+
+.map-nav{
+    z-index: 1;
+    width: 300px;
+    display: inline-flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+}
+
+.map-btns{
+    margin: 0 auto;
+    padding: 15px 40px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.btn-selected{
+    background-color: #eaeaea;
+    border: 1px solid black;    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               
+
+
