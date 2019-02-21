@@ -126,187 +126,22 @@ var valuemin = valuemax = 0;
         max: 2019, 
         range: true,
         values: [2008, 2019],
-        change: function( event, ui ) {
-          /*-------2009------*/
-          if ((ui.values[ 0 ] <=2009) && (ui.values[ 1 ] >=2009)){
+        slide: function( event, ui ) {
 
-            londonProjects.eachLayer(function (layer) {  
-              if(layer.feature.properties.year == 2009) {    
-                layer.setStyle({fillOpacity : 0.4 , weight :  2}) 
-              }
-            });
-
-          } else {
-
-            londonProjects.eachLayer(function (layer) {  
-              if(layer.feature.properties.year == 2009) {    
-                layer.setStyle({fillOpacity : 0 , weight :  0}) 
-              }
-            });
-
-          }
-          /*-------2010------*/
-          if ((ui.values[ 0 ] <=2010) && (ui.values[ 1 ] >=2010)){
+          var min = ui.values[0],
+              max = ui.values[1];
 
           londonProjects.eachLayer(function (layer) {  
-              if(layer.feature.properties.year == 2010) {    
-                layer.setStyle({fillOpacity : 0.4 , weight :  2}) 
+              var projectYear = layer.feature.properties.year;
+
+              if (projectYear >= min && projectYear <= max) {
+                layer._path.classList.remove("hidden");
               }
-            });             
-
-          } else {
-
-            londonProjects.eachLayer(function (layer) {  
-              if(layer.feature.properties.year == 2010) {    
-                layer.setStyle({fillOpacity : 0 , weight :  0}) 
+              else {
+                layer._path.classList.add("hidden");
               }
             });
-
-          }
-          /*-------2011------*/
-          if ((ui.values[ 0 ] <=2011) && (ui.values[ 1 ] >=2011)){
-
-            londonProjects.eachLayer(function (layer) {  
-              if(layer.feature.properties.year == 2011) {    
-                layer.setStyle({fillOpacity : 0.4 , weight :  2}) 
-              }
-            });
-
-          } else {
-
-            londonProjects.eachLayer(function (layer) {  
-              if(layer.feature.properties.year == 2011) {    
-                layer.setStyle({fillOpacity : 0 , weight :  0}) 
-              }
-            });
-
-          }
-          /*-------2012------*/
-          if ((ui.values[ 0 ] <=2012) && (ui.values[ 1 ] >=2012)){
-
-            londonProjects.eachLayer(function (layer) {  
-              if(layer.feature.properties.year == 2012) {    
-                layer.setStyle({fillOpacity : 0.4 , weight :  2}) 
-              }
-            });
-
-          } else {
-
-            londonProjects.eachLayer(function (layer) {  
-              if(layer.feature.properties.year == 2012) {    
-                layer.setStyle({fillOpacity : 0 , weight :  0}) 
-              }
-            });
-
-          }
-          /*-------2013------*/
-          if ((ui.values[ 0 ] <=2013) && (ui.values[ 1 ] >=2013)){
-
-            londonProjects.eachLayer(function (layer) {  
-              if(layer.feature.properties.year == 2013) {    
-                layer.setStyle({fillOpacity : 0.4 , weight :  2}) 
-              }
-            });
-
-          } else {
-
-            londonProjects.eachLayer(function (layer) {  
-              if(layer.feature.properties.year == 2013) {    
-                layer.setStyle({fillOpacity : 0 , weight :  0}) 
-              }
-            });
-
-          }
-          /*-------2014------*/
-          if ((ui.values[ 0 ] <=2014) && (ui.values[ 1 ] >=2014)){
-
-            londonProjects.eachLayer(function (layer) {  
-              if(layer.feature.properties.year == 2014) {    
-                layer.setStyle({fillOpacity : 0.4 , weight :  2}) 
-              }
-            });
-
-          } else {
-
-            londonProjects.eachLayer(function (layer) {  
-              if(layer.feature.properties.year == 2014) {    
-                layer.setStyle({fillOpacity : 0 , weight :  0}) 
-              }
-            });
-
-          }
-          /*-------2015------*/
-          if ((ui.values[ 0 ] <=2015) && (ui.values[ 1 ] >=2015)){
-
-            londonProjects.eachLayer(function (layer) {  
-              if(layer.feature.properties.year == 2015) {    
-                layer.setStyle({fillOpacity : 0.4 , weight :  2}) 
-              }
-            });
-
-          } else {
-
-            londonProjects.eachLayer(function (layer) {  
-              if(layer.feature.properties.year == 2015) {    
-                layer.setStyle({fillOpacity : 0 , weight :  0}) 
-              }
-            });
-
-          }
-          /*-------2016------*/
-          if ((ui.values[ 0 ] <=2016) && (ui.values[ 1 ] >=2016)){
-
-            londonProjects.eachLayer(function (layer) {  
-              if(layer.feature.properties.year == 2015) {    
-                layer.setStyle({fillOpacity : 0.4 , weight :  2}) 
-              }
-            });
-
-          } else {
-
-            londonProjects.eachLayer(function (layer) {  
-              if(layer.feature.properties.year == 2016) {    
-                layer.setStyle({fillOpacity : 0 , weight :  0}) 
-              }
-            });
-
-          }
-          /*-------2017------*/
-          if ((ui.values[ 0 ] <=2017) && (ui.values[ 1 ] >=2017)){
-
-            londonProjects.eachLayer(function (layer) {  
-              if(layer.feature.properties.year == 2017) {    
-                layer.setStyle({fillOpacity : 0.4 , weight :  2}) 
-              }
-            });
-
-          } else {
-
-            londonProjects.eachLayer(function (layer) {  
-              if(layer.feature.properties.year == 2017) {    
-                layer.setStyle({fillOpacity : 0 , weight :  0}) 
-              }
-            });
-
-          }
-          /*-------2018------*/
-          if ((ui.values[ 0 ] <=2018) && (ui.values[ 1 ] >=2018)){
-
-            londonProjects.eachLayer(function (layer) {  
-              if(layer.feature.properties.year == 2018) {    
-                layer.setStyle({fillOpacity : 0.4 , weight :  2}) 
-              }
-            });
-
-          } else {
-
-            londonProjects.eachLayer(function (layer) {  
-              if(layer.feature.properties.year == 2018) {    
-                layer.setStyle({fillOpacity : 0 , weight :  0}) 
-              }
-            });
-
-          }
+            
       }
     })
                         

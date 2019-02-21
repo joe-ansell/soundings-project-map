@@ -446,9 +446,12 @@ width: 300px;
 
 
 
-
-
-
+.leaflet-pane > svg path.leaflet-interactive.hidden,
+path.hidden {
+    fill-opacity: 0;
+    stroke-width: 0;
+    pointer-events: none;
+}
 
 
 
