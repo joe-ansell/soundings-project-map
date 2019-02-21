@@ -27,23 +27,9 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token='
 
 function onEachFeature(feature, layer) {
     layer.on({
-        mouseover: highlightFeature,
-        mouseout: resetHighlight,
         click: zoomToFeature
     });
-}
-
-  //highlights section hoverd on
-function highlightFeature(e) {
-    var layer = e.target;
-
-    layer.setStyle({fillOpacity : 0.4 , weight : 10}) 
-}
-
-function resetHighlight(e) {
-    londonProjects.resetStyle(e.target);
-
-}   
+}  
 
 function zoomToFeature(e, props) {
   // map.fitBounds(e.target.getBounds());
